@@ -1,0 +1,142 @@
+*{box-sizing: border-box;}
+body{
+    margin:0px;
+    overflow: hidden;
+}
+.video-container{
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+}
+.video{
+    height: 100%;
+    width:100%;
+}
+.btn-parent{
+    height: 5rem;
+    width: 5rem;
+    position:fixed;
+    z-index: 6;
+    right: 3rem;
+    top: 15rem;
+    border: 0.5rem solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record-btn,.capture-btn{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border:none;
+    outline: none;
+}
+.capture-container{
+    top: 21rem;
+}
+.record-btn{
+    background-color: red;
+}
+
+.capture-btn{
+    background-color: white;
+}
+/******************************************
+/* Animation*/
+
+.record-animation{
+    animation: scaleUp 1s ease-in infinite;
+}
+.capture-animation{
+    animation:scaleUp 0.5s ease-in;
+}
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);   
+    }
+    25% {
+        transform: scale(1.125);
+    }
+
+    50% {
+        transform: scale(1.16);
+    }
+
+    75% {
+        transform: scale(1.125);
+    }
+}
+
+.filter-container{
+    height:50vh;
+    width:4rem;
+    position: fixed;
+    top:15vh;
+    left:5vw;
+    z-index:5;
+}
+.filter{
+   background-image: url("https://picsum.photos/seed/picsum/200/300"); 
+   height: 20%;  
+   background-size: cover;
+   /* to mix bg color with the  image */
+   background-blend-mode: color-burn; 
+}
+.timing{
+    color:white;
+    position: fixed;
+    bottom :15vh;
+    left:3vw;
+    font-size: 1.7rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: none;
+    box-shadow: tomato;
+}
+.timing-active{
+    display: block;
+}
+
+.ui-filter{
+    height:100vh;
+    width:100vw;
+    position: fixed;
+    z-index:4;
+    display: none;
+    /* opacity: 0.5; */
+
+}
+.ui-filter-active{
+    display: block;
+}
+.zoom-container{
+    height: 7rem;
+    width: 3rem;
+    background-color: #444;
+    position: fixed;
+    z-index: 6;
+    right: 4rem;
+    top: 9vh;
+}
+
+.icon-container{
+    color: white;
+    height: 50%;
+    border-bottom: 2px solid black;
+    text-align: center;
+    padding-top: 1rem;
+}
+.icon{
+    font-size: 180%;
+}
+.gallery{
+    background-image: url("gallery.jpg");
+    background-size: 100% 100%;
+    position: fixed;
+    z-index:6;
+    bottom: 3vh;
+    right:4vw;
+    height: 4.5rem;
+    width:4.5rem;
+}
